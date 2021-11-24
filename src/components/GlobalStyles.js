@@ -1,6 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+    createGlobalStyle
+} from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle `
     :root {
         --primary-color: #064274;
         --secondary-color: #055C95;

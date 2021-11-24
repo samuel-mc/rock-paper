@@ -2,7 +2,9 @@ import React from 'react';
 import ColiseumContainer from './styles';
 
 const Coliseum = ({ children }) => (
-  <ColiseumContainer> {children} </ColiseumContainer>
+  <section>
+    <ColiseumContainer>{children}</ColiseumContainer>
+  </section>
 );
 
 export default Coliseum;

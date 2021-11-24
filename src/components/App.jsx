@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Options from './Options';
 import Coliseum from './Coliseum';
 import ChoiceCPU from './ChoiceCPU';
@@ -35,7 +36,6 @@ const App = () => {
     setChoiceCPU(-1);
     setChoiceUser(-1);
     setWinner(null);
-
     setShowInitialModal(true);
   };
 
@@ -56,12 +56,14 @@ const App = () => {
     }
 
     if (userScore === max || cpuScore === max) {
-      handleSetWinner(userScore === max ? 'user' : 'cpu');
+      setTimeout(() => {
+        handleSetWinner(userScore === max ? 'user' : 'cpu');
+      }, 500);
     }
   }, [userScore, cpuScore]);
 
   return (
-    <div>
+    <main className="main">
       {winner && <WinnerModal winner={winner} resetGame={resetGame} />}
       {showInitialModal && (
         <InitialModal
@@ -79,7 +81,7 @@ const App = () => {
         </Coliseum>
         <Score />
       </AppContext.Provider>
-    </div>
+    </main>
   );
 };
 

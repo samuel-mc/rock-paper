@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
-const OptionsContainer = styled.div`
+const OptionsContainer = styled.section `
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 8px;
 `;
 
-const OptionsTitle = styled.div`
-  color: var(--light-color);
-  font-size: 1.5rem;
-  padding: 12px;
-  text-align: center;
-`;
-
-export { OptionsContainer, OptionsTitle };
+export default OptionsContainer;

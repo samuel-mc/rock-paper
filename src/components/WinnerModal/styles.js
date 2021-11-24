@@ -13,9 +13,10 @@ const Modal = styled.section `
   width: 100%;
   height: 100%;
   z-index: 1;
+  animation: fadeInModal 0.5s ease-in-out;
 
   & h1 {
-    animation: textAnimation 2s ease-in-out infinite;
+    animation: textAnimation 1s ease-in-out infinite alternate;
     color: var(--light-color);
     font-size: 5rem;
     margin-bottom: 20px;
